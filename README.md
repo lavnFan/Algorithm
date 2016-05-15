@@ -1,2 +1,2 @@
 # Algorithm
-Algorithm practice and summary.
+the practice and summary of algorithm.
