@@ -1,2 +1,2 @@
 # Algorithm
-the practice and summary of algorithm.
+The practice and summary of algorithm in CPP and Java.
