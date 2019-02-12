@@ -1,5 +1,5 @@
 # Algorithm
-Practice and summary of algorithm in CPP and Java which from leetCode or sword_offer.
+Practice and summary of algorithm in CPP and Java which from leetcode or sword_offer.
 
 
 
