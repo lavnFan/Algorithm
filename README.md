@@ -1,2 +1,10 @@
 # Algorithm
-The practice and summary of algorithm in CPP and Java.
+Practice and summary of algorithm in CPP and Java which from leetCode or sword_offer.
+
+
+
+
+
+## Contact
+
+git：https://github.com/lavnFan/Algorithm.git
