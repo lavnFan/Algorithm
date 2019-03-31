@@ -1,6 +1,6 @@
 /*
 1. Two Sum
-一个无序数组，和俩个数的目标合，求这俩个数的下标
+一个无序数组（每个数都是唯一的），和俩个数的目标合，求这俩个数的下标
 
 Example：
 Given nums = [2, 7, 11, 15], target = 9,
@@ -46,6 +46,8 @@ class Solution {
 //             }
 //             map.put(nums[i], i);
 //         }
+
+        //方案四：先排序，再左右夹逼，但会扰乱下标
         
         throw new IllegalArgumentException("No two sum solution");
         

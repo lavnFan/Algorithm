@@ -41,7 +41,29 @@
  * }
  */
 class Solution {
+    /**
+     * 移除链表中第n个节点
+     * 方案：一前一后俩个指针，相差n，则当第一个指针到尾节点时，第二个指针就到了要删除到那个节点
+     * 代码优化：先让一个指针走 n，再同时走，相比一步到位思维会清晰一点
+     * tips：注意删除的是首节点，所以多添加一个节点作为首节点较好
+     * tips：注意要删除的节点，获取被删除的前一个节点
+     * @param head
+     * @param n
+     * @return
+     */
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        
+        ListNode dumpy = new ListNode(-1);
+        dumpy.next = head;
+        ListNode tail = dumpy, removeBefore = dumpy;
+        int i = 0;
+        while(tail.next != null){
+            i++;
+            tail = tail.next;
+            if(i >= n + 1){  //移除节点，倒数第n个，获取倒数第 n+1 个节点
+                removeBefore = removeBefore.next;
+            }
+        }
+        removeBefore.next = removeBefore.next.next;
+        return dumpy.next;
     }
 }

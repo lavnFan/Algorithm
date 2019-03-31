@@ -60,8 +60,26 @@
  * 
  */
 class Solution {
+    /**
+    * 获取不重复的元素长度，空间为O(1)，数组有序，前n个必须是不重复的
+    * 思路：若对空间没要求，直接使用hash；这里规定空间限制，但可改变数组内容，是否可用数组作为hash
+    * 方案：根据数组有序，不重复元素标记移位，重复元素记过滤
+    */
     public int removeDuplicates(int[] nums) {
-        
-        return 0;
+        if(nums.length == 0){
+            return 0;
+        }
+        int noDupCur = 0;
+        int maxNoDupLength = 1;
+        for(int i = 1; i < nums.length; i++){
+            if(nums[noDupCur] == nums[i]){
+                continue;
+            }else {
+                noDupCur ++;
+                nums[noDupCur] = nums[i];
+                maxNoDupLength ++;
+            }
+        }
+        return maxNoDupLength;
     }
 }
